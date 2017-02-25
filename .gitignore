@@ -20,7 +20,7 @@ xcuserdata/
 ## Other
 *.moved-aside
 *.xcuserstate
-*.APIConstants
+/APIClient/APIConstants.swift
 
 ## Obj-C/Swift specific
 *.hmap

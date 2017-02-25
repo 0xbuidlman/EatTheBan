@@ -1,14 +1,18 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9EBDA4CE590F11F3B784FFA0FE5D6DBB2731B34D",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9EBDA4CE590F11F3B784FFA0FE5D6DBB2731B34D+++F8E01BC",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "9EBDA4CE590F11F3B784FFA0FE5D6DBB2731B34D" : 9223372036854775807
+    "9EBDA4CE590F11F3B784FFA0FE5D6DBB2731B34D+++63A1438" : 9223372036854775807,
+    "9EBDA4CE590F11F3B784FFA0FE5D6DBB2731B34D+++98D9271" : 9223372036854775807,
+    "9EBDA4CE590F11F3B784FFA0FE5D6DBB2731B34D+++F8E01BC" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "33E58F49-F527-4F79-BF0E-A1345D601C7A",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "9EBDA4CE590F11F3B784FFA0FE5D6DBB2731B34D" : ""
+    "9EBDA4CE590F11F3B784FFA0FE5D6DBB2731B34D+++63A1438" : "",
+    "9EBDA4CE590F11F3B784FFA0FE5D6DBB2731B34D+++98D9271" : "",
+    "9EBDA4CE590F11F3B784FFA0FE5D6DBB2731B34D+++F8E01BC" : "EatTheBan\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "EatTheBan",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -17,12 +21,17 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/path_to\/EatTheBan.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9EBDA4CE590F11F3B784FFA0FE5D6DBB2731B34D"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9EBDA4CE590F11F3B784FFA0FE5D6DBB2731B34D+++63A1438"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kaylagalway\/EatTheBan.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9EBDA4CE590F11F3B784FFA0FE5D6DBB2731B34D"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9EBDA4CE590F11F3B784FFA0FE5D6DBB2731B34D+++98D9271"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kaylagalway\/EatTheBan.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9EBDA4CE590F11F3B784FFA0FE5D6DBB2731B34D+++F8E01BC"
     }
   ]
 }

@@ -34,6 +34,15 @@
 		CD9CACAC1E62085600E43792 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CACAB1E62085600E43792 /* Location.swift */; };
 		CD9CACAE1E62087E00E43792 /* ContentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CACAD1E62087E00E43792 /* ContentItem.swift */; };
 		CD9CACB01E6209BB00E43792 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CACAF1E6209BB00E43792 /* APIConstants.swift */; };
+		CD9CACB31E621FB300E43792 /* FirstTimeWelcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CACB21E621FB300E43792 /* FirstTimeWelcome.swift */; };
+		CD9CACB51E62201300E43792 /* FirstTimeWelcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9CACB41E62201300E43792 /* FirstTimeWelcome.storyboard */; };
+		CD9CACB71E62283D00E43792 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CACB61E62283D00E43792 /* CountryTableViewCell.swift */; };
+		CD9CACBB1E62286C00E43792 /* CountryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9CACBA1E62286C00E43792 /* CountryTableViewCell.xib */; };
+		CD9CACBD1E623C8900E43792 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CACBC1E623C8900E43792 /* MainNavigationController.swift */; };
+		CD9CACBF1E623ECD00E43792 /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CACBE1E623ECD00E43792 /* CountryDetailsViewController.swift */; };
+		CD9CACC11E623EE000E43792 /* CountryDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9CACC01E623EE000E43792 /* CountryDetailsViewController.storyboard */; };
+		CD9CACC51E62470400E43792 /* RestaurantsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CACC41E62470400E43792 /* RestaurantsContainerViewController.swift */; };
+		CD9CACC71E62477B00E43792 /* OverviewContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CACC61E62477B00E43792 /* OverviewContainerViewController.swift */; };
 		D7DFEDEB3B5D96882027BEAC /* Pods_EatTheBan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671C3259C530FB7BB0632683 /* Pods_EatTheBan.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +102,15 @@
 		CD9CACAB1E62085600E43792 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Models/Location.swift; sourceTree = "<group>"; };
 		CD9CACAD1E62087E00E43792 /* ContentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentItem.swift; path = Models/ContentItem.swift; sourceTree = "<group>"; };
 		CD9CACAF1E6209BB00E43792 /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIConstants.swift; path = APIClient/APIConstants.swift; sourceTree = "<group>"; };
+		CD9CACB21E621FB300E43792 /* FirstTimeWelcome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstTimeWelcome.swift; path = Views/FirstTimeWelcome/FirstTimeWelcome.swift; sourceTree = "<group>"; };
+		CD9CACB41E62201300E43792 /* FirstTimeWelcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FirstTimeWelcome.storyboard; path = Views/FirstTimeWelcome/FirstTimeWelcome.storyboard; sourceTree = "<group>"; };
+		CD9CACB61E62283D00E43792 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountryTableViewCell.swift; path = Views/HomePageViewController/CountryTableViewCell.swift; sourceTree = "<group>"; };
+		CD9CACBA1E62286C00E43792 /* CountryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CountryTableViewCell.xib; path = Views/HomePageViewController/CountryTableViewCell.xib; sourceTree = "<group>"; };
+		CD9CACBC1E623C8900E43792 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainNavigationController.swift; path = Views/MainViewController/MainNavigationController.swift; sourceTree = "<group>"; };
+		CD9CACBE1E623ECD00E43792 /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountryDetailsViewController.swift; path = Views/HomePageViewController/CountryDetailsViewController.swift; sourceTree = "<group>"; };
+		CD9CACC01E623EE000E43792 /* CountryDetailsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CountryDetailsViewController.storyboard; path = Views/HomePageViewController/CountryDetailsViewController.storyboard; sourceTree = "<group>"; };
+		CD9CACC41E62470400E43792 /* RestaurantsContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantsContainerViewController.swift; path = Views/HomePageViewController/RestaurantsContainerViewController.swift; sourceTree = "<group>"; };
+		CD9CACC61E62477B00E43792 /* OverviewContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OverviewContainerViewController.swift; path = Views/HomePageViewController/OverviewContainerViewController.swift; sourceTree = "<group>"; };
 		CDD140F67173A1EB1CF1A4B3 /* Pods-EatTheBanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatTheBanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatTheBanTests/Pods-EatTheBanTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F94F47489EA28A7116D62A65 /* Pods-EatTheBan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatTheBan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatTheBan/Pods-EatTheBan.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				CD9CAC921E61F9D600E43792 /* ViewTools */,
+				CD9CACB11E621F4000E43792 /* FirstTimeWelcome */,
 				CD9CAC911E61F9C300E43792 /* Home */,
 				CD9CAC961E61FB0800E43792 /* RestaurantMap */,
 				CD9CAC951E61FAF700E43792 /* About */,
@@ -249,6 +268,12 @@
 			children = (
 				CD9CAC8E1E61F9B400E43792 /* HomePageViewController.swift */,
 				CD9CAC8D1E61F9B400E43792 /* HomePageViewController.storyboard */,
+				CD9CACB61E62283D00E43792 /* CountryTableViewCell.swift */,
+				CD9CACBA1E62286C00E43792 /* CountryTableViewCell.xib */,
+				CD9CACBE1E623ECD00E43792 /* CountryDetailsViewController.swift */,
+				CD9CACC01E623EE000E43792 /* CountryDetailsViewController.storyboard */,
+				CD9CACC41E62470400E43792 /* RestaurantsContainerViewController.swift */,
+				CD9CACC61E62477B00E43792 /* OverviewContainerViewController.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -257,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				CD9CAC931E61F9EA00E43792 /* MainViewController.swift */,
+				CD9CACBC1E623C8900E43792 /* MainNavigationController.swift */,
 			);
 			name = ViewTools;
 			sourceTree = "<group>";
@@ -297,6 +323,15 @@
 				CD9CACAB1E62085600E43792 /* Location.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		CD9CACB11E621F4000E43792 /* FirstTimeWelcome */ = {
+			isa = PBXGroup;
+			children = (
+				CD9CACB21E621FB300E43792 /* FirstTimeWelcome.swift */,
+				CD9CACB41E62201300E43792 /* FirstTimeWelcome.storyboard */,
+			);
+			name = FirstTimeWelcome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,8 +451,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD9CAC9D1E61FB8400E43792 /* RestaurantsViewController.storyboard in Resources */,
+				CD9CACC11E623EE000E43792 /* CountryDetailsViewController.storyboard in Resources */,
 				CD9CACA31E62045700E43792 /* SubmitViewController.storyboard in Resources */,
 				CD9CAC551E61F05C00E43792 /* LaunchScreen.storyboard in Resources */,
+				CD9CACB51E62201300E43792 /* FirstTimeWelcome.storyboard in Resources */,
+				CD9CACBB1E62286C00E43792 /* CountryTableViewCell.xib in Resources */,
 				CD9CAC791E61F09400E43792 /* GoogleService-Info.plist in Resources */,
 				CD9CACA11E62040300E43792 /* AboutViewController.storyboard in Resources */,
 				CD9CAC8F1E61F9B400E43792 /* HomePageViewController.storyboard in Resources */,
@@ -570,13 +608,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9CACBD1E623C8900E43792 /* MainNavigationController.swift in Sources */,
 				CD9CAC941E61F9EA00E43792 /* MainViewController.swift in Sources */,
 				CD9CAC821E61F8DB00E43792 /* HomePageViewModel.swift in Sources */,
 				CD9CAC4D1E61F05C00E43792 /* ViewController.swift in Sources */,
 				CD9CAC9F1E61FBA100E43792 /* AboutViewController.swift in Sources */,
+				CD9CACB31E621FB300E43792 /* FirstTimeWelcome.swift in Sources */,
 				CD9CACAE1E62087E00E43792 /* ContentItem.swift in Sources */,
+				CD9CACB71E62283D00E43792 /* CountryTableViewCell.swift in Sources */,
 				CD9CAC901E61F9B400E43792 /* HomePageViewController.swift in Sources */,
+				CD9CACC51E62470400E43792 /* RestaurantsContainerViewController.swift in Sources */,
 				CD9CAC4B1E61F05C00E43792 /* AppDelegate.swift in Sources */,
+				CD9CACBF1E623ECD00E43792 /* CountryDetailsViewController.swift in Sources */,
+				CD9CACC71E62477B00E43792 /* OverviewContainerViewController.swift in Sources */,
 				CD9CACAC1E62085600E43792 /* Location.swift in Sources */,
 				CD9CACA51E62046700E43792 /* SubmitViewController.swift in Sources */,
 				CD9CACA81E62083100E43792 /* Country.swift in Sources */,

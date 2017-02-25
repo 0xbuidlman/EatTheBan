@@ -10,7 +10,12 @@ import Foundation
 
 class Country: ContentItem {
   
+  var countryName: String
+  var countryDetails: String
   
-  
+  init(withName name: String, description: String) {
+    self.countryName = name
+    self.countryDetails = description
+  }
   
 }

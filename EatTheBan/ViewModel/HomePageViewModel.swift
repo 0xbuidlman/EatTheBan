@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+struct HomePageViewModel {
+  
+  var countries = [Country]()
+  var countryNames = ["Iran", "Iraq", "Somalia", "Syria", "Yemen", "Sudan", "Libya"]
+  
+  
+  
+}
