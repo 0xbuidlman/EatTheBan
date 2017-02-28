@@ -20,7 +20,7 @@ class FirstTimeWelcome: MainViewController {
     roundEatButtonEdges()
   }
   
-  func makeLogoCircle() {
+  private func makeLogoCircle() {
     logoImageView.clipsToBounds = true
     logoImageView.layer.borderColor = UIColor.black.cgColor
     logoImageView.layer.borderWidth = 0.5
@@ -28,7 +28,7 @@ class FirstTimeWelcome: MainViewController {
     eatButton.layoutIfNeeded()
   }
   
-  func roundEatButtonEdges() {
+  private func roundEatButtonEdges() {
     eatButton.clipsToBounds = true
     eatButton.layer.borderWidth = 0.5
     eatButton.layer.borderColor = UIColor.black.cgColor

@@ -21,7 +21,7 @@ class HomePageViewController: MainViewController, UITableViewDelegate, UITableVi
   
   override func viewDidLoad() {
     setUpCustomTableViewCells()
-    roundButtonEdges()
+    customizeFoodNearMeButton()
   }
   
   static func storyboardInstance() -> HomePageViewController? {
@@ -30,17 +30,23 @@ class HomePageViewController: MainViewController, UITableViewDelegate, UITableVi
     return storyboard.instantiateViewController(withIdentifier: VCConstants.homeVC) as? HomePageViewController
   }
   
-  func setUpCustomTableViewCells() {
+  private func setUpCustomTableViewCells() {
     countriesTableView.dataSource = self
     countriesTableView.delegate = self
     let cellNib = UINib.init(nibName: StoryboardConstants.countryCell, bundle: nil)
     countriesTableView.register(cellNib, forCellReuseIdentifier: ViewIDConstants.countryCell)
   }
   
-  func roundButtonEdges() {
+  private func customizeFoodNearMeButton() {
     foodNearMeButton.layoutIfNeeded()
     foodNearMeButton.layer.cornerRadius = foodNearMeButton.frame.height * 0.2
-    foodNearMeButton.layer.masksToBounds = true
+    
+    foodNearMeButton.layer.shadowOffset = CGSize.zero
+    //CGSize(width: 0.0, height: 1.0)
+    foodNearMeButton.layer.shadowColor = UIColor.black.cgColor
+    foodNearMeButton.layer.shadowRadius = 5.0 //default is 3.0
+    foodNearMeButton.layer.shadowOpacity = 0.4 //default is 0.0
+//    foodNearMeButton.layer.masksToBounds = true
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -73,7 +79,6 @@ class HomePageViewController: MainViewController, UITableViewDelegate, UITableVi
     
     
   }
-  
   
   func addNavigationController() {
     let navController = UINavigationController(rootViewController: self)

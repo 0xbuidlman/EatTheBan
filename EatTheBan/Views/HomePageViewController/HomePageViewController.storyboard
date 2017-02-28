@@ -33,7 +33,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IrP-NS-EZm" userLabel="TitleStackView">
-                                <rect key="frame" x="37.5" y="56.5" width="300" height="75"/>
+                                <rect key="frame" x="38" y="57" width="300" height="75"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eat The Ban NYC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SiC-vD-lxd">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="37.5"/>
@@ -52,8 +52,12 @@
                                     <constraint firstAttribute="width" secondItem="IrP-NS-EZm" secondAttribute="height" multiplier="4:1" id="B7O-SG-VX3"/>
                                 </constraints>
                             </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z2s-7f-D5z" userLabel="CountriesTableView">
+                                <rect key="frame" x="0.0" y="206.5" width="375" height="460.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOt-v5-aA9" userLabel="FoodNearMeButton">
-                                <rect key="frame" x="93" y="169" width="187.5" height="37.5"/>
+                                <rect key="frame" x="93" y="168.5" width="188" height="38"/>
                                 <color key="backgroundColor" red="0.92941176470588238" green="0.23529411764705882" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kOt-v5-aA9" secondAttribute="height" multiplier="5:1" id="VWo-Dy-Mcm"/>
@@ -67,10 +71,6 @@
                                     <action selector="foodNearMeButtonTapped:" destination="OYa-OC-K5m" eventType="touchUpInside" id="ZKY-AI-vRM"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z2s-7f-D5z" userLabel="CountriesTableView">
-                                <rect key="frame" x="0.0" y="206.5" width="375" height="460.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
