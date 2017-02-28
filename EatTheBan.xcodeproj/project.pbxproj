@@ -33,7 +33,6 @@
 		CD9CACAA1E62084300E43792 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CACA91E62084300E43792 /* Restaurant.swift */; };
 		CD9CACAC1E62085600E43792 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CACAB1E62085600E43792 /* Location.swift */; };
 		CD9CACAE1E62087E00E43792 /* ContentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CACAD1E62087E00E43792 /* ContentItem.swift */; };
-		CD9CACB01E6209BB00E43792 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CACAF1E6209BB00E43792 /* APIConstants.swift */; };
 		CD9CACB31E621FB300E43792 /* FirstTimeWelcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CACB21E621FB300E43792 /* FirstTimeWelcome.swift */; };
 		CD9CACB51E62201300E43792 /* FirstTimeWelcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9CACB41E62201300E43792 /* FirstTimeWelcome.storyboard */; };
 		CD9CACB71E62283D00E43792 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CACB61E62283D00E43792 /* CountryTableViewCell.swift */; };
@@ -43,6 +42,7 @@
 		CD9CACC11E623EE000E43792 /* CountryDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD9CACC01E623EE000E43792 /* CountryDetailsViewController.storyboard */; };
 		CD9CACC51E62470400E43792 /* RestaurantsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CACC41E62470400E43792 /* RestaurantsContainerViewController.swift */; };
 		CD9CACC71E62477B00E43792 /* OverviewContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CACC61E62477B00E43792 /* OverviewContainerViewController.swift */; };
+		CD9CACC91E65E3C900E43792 /* ViewIDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CACC81E65E3C900E43792 /* ViewIDConstants.swift */; };
 		D7DFEDEB3B5D96882027BEAC /* Pods_EatTheBan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671C3259C530FB7BB0632683 /* Pods_EatTheBan.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,7 +101,6 @@
 		CD9CACA91E62084300E43792 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Restaurant.swift; path = Models/Restaurant.swift; sourceTree = "<group>"; };
 		CD9CACAB1E62085600E43792 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Models/Location.swift; sourceTree = "<group>"; };
 		CD9CACAD1E62087E00E43792 /* ContentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentItem.swift; path = Models/ContentItem.swift; sourceTree = "<group>"; };
-		CD9CACAF1E6209BB00E43792 /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIConstants.swift; path = APIClient/APIConstants.swift; sourceTree = "<group>"; };
 		CD9CACB21E621FB300E43792 /* FirstTimeWelcome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstTimeWelcome.swift; path = Views/FirstTimeWelcome/FirstTimeWelcome.swift; sourceTree = "<group>"; };
 		CD9CACB41E62201300E43792 /* FirstTimeWelcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FirstTimeWelcome.storyboard; path = Views/FirstTimeWelcome/FirstTimeWelcome.storyboard; sourceTree = "<group>"; };
 		CD9CACB61E62283D00E43792 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountryTableViewCell.swift; path = Views/HomePageViewController/CountryTableViewCell.swift; sourceTree = "<group>"; };
@@ -111,6 +110,7 @@
 		CD9CACC01E623EE000E43792 /* CountryDetailsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CountryDetailsViewController.storyboard; path = Views/HomePageViewController/CountryDetailsViewController.storyboard; sourceTree = "<group>"; };
 		CD9CACC41E62470400E43792 /* RestaurantsContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantsContainerViewController.swift; path = Views/HomePageViewController/RestaurantsContainerViewController.swift; sourceTree = "<group>"; };
 		CD9CACC61E62477B00E43792 /* OverviewContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OverviewContainerViewController.swift; path = Views/HomePageViewController/OverviewContainerViewController.swift; sourceTree = "<group>"; };
+		CD9CACC81E65E3C900E43792 /* ViewIDConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewIDConstants.swift; path = Views/MainViewController/ViewIDConstants.swift; sourceTree = "<group>"; };
 		CDD140F67173A1EB1CF1A4B3 /* Pods-EatTheBanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatTheBanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatTheBanTests/Pods-EatTheBanTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F94F47489EA28A7116D62A65 /* Pods-EatTheBan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatTheBan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatTheBan/Pods-EatTheBan.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -249,7 +249,6 @@
 		CD9CAC7C1E61F88A00E43792 /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
-				CD9CACAF1E6209BB00E43792 /* APIConstants.swift */,
 				CD9CAC891E61F92300E43792 /* APIClient.swift */,
 				CD9CAC871E61F91600E43792 /* FirebaseAPIClient.swift */,
 			);
@@ -283,6 +282,7 @@
 			children = (
 				CD9CAC931E61F9EA00E43792 /* MainViewController.swift */,
 				CD9CACBC1E623C8900E43792 /* MainNavigationController.swift */,
+				CD9CACC81E65E3C900E43792 /* ViewIDConstants.swift */,
 			);
 			name = ViewTools;
 			sourceTree = "<group>";
@@ -621,11 +621,11 @@
 				CD9CAC4B1E61F05C00E43792 /* AppDelegate.swift in Sources */,
 				CD9CACBF1E623ECD00E43792 /* CountryDetailsViewController.swift in Sources */,
 				CD9CACC71E62477B00E43792 /* OverviewContainerViewController.swift in Sources */,
+				CD9CACC91E65E3C900E43792 /* ViewIDConstants.swift in Sources */,
 				CD9CACAC1E62085600E43792 /* Location.swift in Sources */,
 				CD9CACA51E62046700E43792 /* SubmitViewController.swift in Sources */,
 				CD9CACA81E62083100E43792 /* Country.swift in Sources */,
 				CD9CACAA1E62084300E43792 /* Restaurant.swift in Sources */,
-				CD9CACB01E6209BB00E43792 /* APIConstants.swift in Sources */,
 				CD9CAC991E61FB3800E43792 /* RestaurantsViewController.swift in Sources */,
 				CD9CAC881E61F91600E43792 /* FirebaseAPIClient.swift in Sources */,
 				CD9CAC8A1E61F92300E43792 /* APIClient.swift in Sources */,

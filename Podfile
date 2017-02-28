@@ -7,6 +7,8 @@ target 'EatTheBan' do
 
   # Pods for EatTheBan
   pod 'Firebase/Core'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
 
   target 'EatTheBanTests' do
     inherit! :search_paths

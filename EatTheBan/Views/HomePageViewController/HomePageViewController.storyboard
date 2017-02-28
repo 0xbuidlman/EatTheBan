@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -25,54 +26,73 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rMe-rt-il7" userLabel="BannerImageView">
-                                <rect key="frame" x="0.0" y="20" width="375" height="187.5"/>
-                                <color key="backgroundColor" white="0.92000000000000004" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="187.5"/>
+                                <color key="backgroundColor" red="0.5490196078431373" green="0.84705882352941175" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rMe-rt-il7" secondAttribute="height" multiplier="2:1" id="dXM-xF-ppp"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IrP-NS-EZm" userLabel="TitleStackView">
-                                <rect key="frame" x="56" y="62" width="263" height="105"/>
+                                <rect key="frame" x="37.5" y="56.5" width="300" height="75"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EAT THE BAN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SiC-vD-lxd">
-                                        <rect key="frame" x="0.0" y="0.0" width="263" height="52.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eat The Ban NYC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SiC-vD-lxd">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="37.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Immigrants make America taste great!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXs-8q-gFh">
-                                        <rect key="frame" x="0.0" y="52.5" width="263" height="52.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the country, eat all the things" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXs-8q-gFh">
+                                        <rect key="frame" x="0.0" y="37.5" width="300" height="37.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="IrP-NS-EZm" secondAttribute="height" multiplier="2.5:1" id="B7O-SG-VX3"/>
+                                    <constraint firstAttribute="width" secondItem="IrP-NS-EZm" secondAttribute="height" multiplier="4:1" id="B7O-SG-VX3"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOt-v5-aA9" userLabel="FoodNearMeButton">
+                                <rect key="frame" x="93" y="169" width="187.5" height="37.5"/>
+                                <color key="backgroundColor" red="0.92941176470588238" green="0.23529411764705882" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kOt-v5-aA9" secondAttribute="height" multiplier="5:1" id="VWo-Dy-Mcm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Food Near Me -&gt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="foodNearMeButtonTapped:" destination="OYa-OC-K5m" eventType="touchUpInside" id="ZKY-AI-vRM"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z2s-7f-D5z" userLabel="CountriesTableView">
-                                <rect key="frame" x="0.0" y="207.5" width="375" height="459.5"/>
+                                <rect key="frame" x="0.0" y="206.5" width="375" height="460.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IrP-NS-EZm" firstAttribute="width" secondItem="rMe-rt-il7" secondAttribute="width" multiplier="0.7" id="23g-Jp-CqC"/>
+                            <constraint firstItem="IrP-NS-EZm" firstAttribute="width" secondItem="rMe-rt-il7" secondAttribute="width" multiplier="0.8" id="23g-Jp-CqC"/>
+                            <constraint firstItem="kOt-v5-aA9" firstAttribute="centerX" secondItem="U6O-TF-IN3" secondAttribute="centerX" id="2QA-sT-cGZ"/>
                             <constraint firstItem="IrP-NS-EZm" firstAttribute="centerX" secondItem="rMe-rt-il7" secondAttribute="centerX" id="2dS-hc-3BW"/>
                             <constraint firstItem="rMe-rt-il7" firstAttribute="width" secondItem="U6O-TF-IN3" secondAttribute="width" id="4uo-7L-M4D"/>
                             <constraint firstItem="rMe-rt-il7" firstAttribute="centerX" secondItem="U6O-TF-IN3" secondAttribute="centerX" id="610-v8-n5D"/>
                             <constraint firstItem="Z2s-7f-D5z" firstAttribute="width" secondItem="U6O-TF-IN3" secondAttribute="width" id="AC1-Cu-kBI"/>
+                            <constraint firstItem="kOt-v5-aA9" firstAttribute="width" secondItem="U6O-TF-IN3" secondAttribute="width" multiplier="0.5" id="BD0-MF-3hp"/>
                             <constraint firstItem="Z2s-7f-D5z" firstAttribute="centerX" secondItem="U6O-TF-IN3" secondAttribute="centerX" id="RUe-R1-Mx8"/>
-                            <constraint firstItem="rMe-rt-il7" firstAttribute="top" secondItem="U6O-TF-IN3" secondAttribute="topMargin" constant="20" id="Soy-nM-VYY"/>
+                            <constraint firstItem="rMe-rt-il7" firstAttribute="top" secondItem="U6O-TF-IN3" secondAttribute="topMargin" id="Soy-nM-VYY"/>
                             <constraint firstItem="IrP-NS-EZm" firstAttribute="centerY" secondItem="rMe-rt-il7" secondAttribute="centerY" id="aVM-TA-gfT"/>
-                            <constraint firstItem="Z2s-7f-D5z" firstAttribute="top" secondItem="rMe-rt-il7" secondAttribute="bottom" id="flM-c0-pVD"/>
                             <constraint firstItem="Z2s-7f-D5z" firstAttribute="bottom" secondItem="ReB-te-XS0" secondAttribute="top" id="lJl-iX-svi"/>
+                            <constraint firstItem="kOt-v5-aA9" firstAttribute="centerY" secondItem="rMe-rt-il7" secondAttribute="bottom" id="v62-W2-LMY"/>
+                            <constraint firstItem="Z2s-7f-D5z" firstAttribute="top" secondItem="kOt-v5-aA9" secondAttribute="bottom" id="xTB-4Z-KNV"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bannerImageView" destination="rMe-rt-il7" id="Mkm-S9-6Kn"/>
                         <outlet property="countriesTableView" destination="Z2s-7f-D5z" id="zdu-QO-MVA"/>
+                        <outlet property="foodNearMeButton" destination="kOt-v5-aA9" id="ZK3-gN-IWN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHf-fi-5nq" userLabel="First Responder" sceneMemberID="firstResponder"/>

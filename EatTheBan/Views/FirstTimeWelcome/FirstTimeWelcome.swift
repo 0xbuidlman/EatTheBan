@@ -32,8 +32,9 @@ class FirstTimeWelcome: MainViewController {
     eatButton.clipsToBounds = true
     eatButton.layer.borderWidth = 0.5
     eatButton.layer.borderColor = UIColor.black.cgColor
-    eatButton.layer.cornerRadius = eatButton.frame.height * 0.8
+    eatButton.layer.cornerRadius = eatButton.frame.height * 0.2
     eatButton.layoutIfNeeded()
+    eatButton.layer.masksToBounds = true
   }
   
   

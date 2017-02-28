@@ -29,8 +29,8 @@ class CountryDetailsViewController: MainViewController {
   
   static func storyboardInstance() -> CountryDetailsViewController? {
     let storyboard = UIStoryboard(name:
-      "CountryDetailsViewController", bundle: nil)
-    return storyboard.instantiateViewController(withIdentifier: "CountryDetails") as? CountryDetailsViewController
+      StoryboardConstants.countryDetailsVC, bundle: nil)
+    return storyboard.instantiateViewController(withIdentifier: VCConstants.countryDetailsVC) as? CountryDetailsViewController
   }
   
   

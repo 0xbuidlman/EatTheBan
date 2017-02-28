@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import GoogleMaps
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     FIRApp.configure()
+
     setUpTabBar()
     return true
   }
@@ -25,20 +28,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func setUpTabBar() {
     let tabBarController = UITabBarController()
     
-    let homeStoryBoard = UIStoryboard(name: "HomePageViewController", bundle: nil)
-    let homeVC = homeStoryBoard.instantiateViewController(withIdentifier: "HomePage") as! HomePageViewController
+    let homeStoryBoard = UIStoryboard(name: StoryboardConstants.homeVC, bundle: nil)
+    let homeVC = homeStoryBoard.instantiateViewController(withIdentifier: VCConstants.homeVC) as! HomePageViewController
     homeVC.tabBarItem = UITabBarItem(title: "Home", image: nil, tag: 0)
     
-    let restaurantsStoryboard = UIStoryboard(name: "RestaurantsViewController", bundle: nil)
-    let restaurantsVC = restaurantsStoryboard.instantiateViewController(withIdentifier: "Restaurants") as! RestaurantsViewController
+    let restaurantsStoryboard = UIStoryboard(name: StoryboardConstants.restaurantsVC, bundle: nil)
+    let restaurantsVC = restaurantsStoryboard.instantiateViewController(withIdentifier: VCConstants.restaurantsVC) as! RestaurantsViewController
     restaurantsVC.tabBarItem = UITabBarItem(title: "Restaurants", image: nil, tag: 2)
     
-    let aboutStoryboard = UIStoryboard(name: "AboutViewController", bundle: nil)
-    let aboutVC = aboutStoryboard.instantiateViewController(withIdentifier: "About") as! AboutViewController
+    let aboutStoryboard = UIStoryboard(name: StoryboardConstants.aboutVC, bundle: nil)
+    let aboutVC = aboutStoryboard.instantiateViewController(withIdentifier: VCConstants.aboutVC) as! AboutViewController
     aboutVC.tabBarItem = UITabBarItem(title: "About", image: nil, tag: 3)
     
-    let submitStoryboard = UIStoryboard(name: "SubmitViewController", bundle: nil)
-    let submitVC = submitStoryboard.instantiateViewController(withIdentifier: "Submit") as! SubmitViewController
+    let submitStoryboard = UIStoryboard(name: StoryboardConstants.submitVC, bundle: nil)
+    let submitVC = submitStoryboard.instantiateViewController(withIdentifier: VCConstants.submitVC) as! SubmitViewController
     submitVC.tabBarItem = UITabBarItem(title: "Submit", image: nil, tag: 3)
     
     let controllers = [homeVC, restaurantsVC, aboutVC, submitVC]

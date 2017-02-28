@@ -14,26 +14,39 @@ class HomePageViewController: MainViewController, UITableViewDelegate, UITableVi
   @IBOutlet weak var countriesTableView: UITableView!
   @IBOutlet weak var bannerImageView: UIImageView!
   
+  @IBOutlet weak var foodNearMeButton: UIButton!
+  
+  
+  let homeVM = HomePageViewModel()
   
   override func viewDidLoad() {
     setUpCustomTableViewCells()
+    roundButtonEdges()
   }
   
   static func storyboardInstance() -> HomePageViewController? {
     let storyboard = UIStoryboard(name:
-      "HomePageViewController", bundle: nil)
-    return storyboard.instantiateViewController(withIdentifier: "HomePage") as? HomePageViewController
+      StoryboardConstants.homeVC, bundle: nil)
+    return storyboard.instantiateViewController(withIdentifier: VCConstants.homeVC) as? HomePageViewController
   }
   
   func setUpCustomTableViewCells() {
     countriesTableView.dataSource = self
     countriesTableView.delegate = self
-    let cellNib = UINib.init(nibName: "CountryTableViewCell", bundle: nil)
-    countriesTableView.register(cellNib, forCellReuseIdentifier: "CountryCell")
+    let cellNib = UINib.init(nibName: StoryboardConstants.countryCell, bundle: nil)
+    countriesTableView.register(cellNib, forCellReuseIdentifier: ViewIDConstants.countryCell)
+  }
+  
+  func roundButtonEdges() {
+    foodNearMeButton.layoutIfNeeded()
+    foodNearMeButton.layer.cornerRadius = foodNearMeButton.frame.height * 0.2
+    foodNearMeButton.layer.masksToBounds = true
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = countriesTableView.dequeueReusableCell(withIdentifier: "CountryCell") as! CountryTableViewCell
+    let cell = countriesTableView.dequeueReusableCell(withIdentifier: ViewIDConstants.countryCell) as! CountryTableViewCell
+    cell.countryNameLabel.text = homeVM.countryNames[indexPath.row]
+    cell.flagImageView.image = homeVM.countryFlags[indexPath.row]
     return cell
   }
   
@@ -42,25 +55,25 @@ class HomePageViewController: MainViewController, UITableViewDelegate, UITableVi
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 8
+    return 7
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//    guard let tabController = tabBarController else {
-      return countriesTableView.frame.height / 8
-//    }
-//    let tableViewHeight = view.frame.height - tabController.tabBar.frame.height - bannerImageView.frame.height
-//    return tableViewHeight
+      return (countriesTableView.frame.height - countriesTableView.sectionHeaderHeight) / 7
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     //addNavigationController()
-    let detailsStoryboard = UIStoryboard.init(name: "CountryDetailsViewController", bundle: nil)
-    let detailsVC = detailsStoryboard.instantiateViewController(withIdentifier: "CountryDetails") as! CountryDetailsViewController
+    let detailsStoryboard = UIStoryboard.init(name: StoryboardConstants.countryDetailsVC, bundle: nil)
+    let detailsVC = detailsStoryboard.instantiateViewController(withIdentifier: VCConstants.countryDetailsVC) as! CountryDetailsViewController
     present(detailsVC, animated: true, completion: nil)
-    
-    //navigationController?.pushViewController(detailsVC, animated: true)
   }
+  
+  @IBAction func foodNearMeButtonTapped(_ sender: Any) {
+    
+    
+  }
+  
   
   func addNavigationController() {
     let navController = UINavigationController(rootViewController: self)
