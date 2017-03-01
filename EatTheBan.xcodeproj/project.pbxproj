@@ -44,6 +44,7 @@
 		CD9CACC71E62477B00E43792 /* OverviewContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CACC61E62477B00E43792 /* OverviewContainerViewController.swift */; };
 		CD9CACC91E65E3C900E43792 /* ViewIDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CACC81E65E3C900E43792 /* ViewIDConstants.swift */; };
 		CD9CACCB1E66014B00E43792 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CACCA1E66014B00E43792 /* MapViewController.swift */; };
+		CDF55B091E674802005FF644 /* TestKeyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF55B081E674802005FF644 /* TestKeyConstants.swift */; };
 		D7DFEDEB3B5D96882027BEAC /* Pods_EatTheBan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 671C3259C530FB7BB0632683 /* Pods_EatTheBan.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +115,7 @@
 		CD9CACC81E65E3C900E43792 /* ViewIDConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewIDConstants.swift; path = Views/MainViewController/ViewIDConstants.swift; sourceTree = "<group>"; };
 		CD9CACCA1E66014B00E43792 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Views/RestaurantsViewController/MapViewController.swift; sourceTree = "<group>"; };
 		CDD140F67173A1EB1CF1A4B3 /* Pods-EatTheBanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatTheBanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatTheBanTests/Pods-EatTheBanTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CDF55B081E674802005FF644 /* TestKeyConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestKeyConstants.swift; path = APIClient/TestKeyConstants.swift; sourceTree = "<group>"; };
 		F94F47489EA28A7116D62A65 /* Pods-EatTheBan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatTheBan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatTheBan/Pods-EatTheBan.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -253,6 +255,7 @@
 			children = (
 				CD9CAC891E61F92300E43792 /* APIClient.swift */,
 				CD9CAC871E61F91600E43792 /* FirebaseAPIClient.swift */,
+				CDF55B081E674802005FF644 /* TestKeyConstants.swift */,
 			);
 			name = APIClient;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				CD9CACBD1E623C8900E43792 /* MainNavigationController.swift in Sources */,
 				CD9CAC941E61F9EA00E43792 /* MainViewController.swift in Sources */,
 				CD9CAC821E61F8DB00E43792 /* HomePageViewModel.swift in Sources */,
+				CDF55B091E674802005FF644 /* TestKeyConstants.swift in Sources */,
 				CD9CAC4D1E61F05C00E43792 /* ViewController.swift in Sources */,
 				CD9CAC9F1E61FBA100E43792 /* AboutViewController.swift in Sources */,
 				CD9CACB31E621FB300E43792 /* FirstTimeWelcome.swift in Sources */,
