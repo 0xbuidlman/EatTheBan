@@ -20,7 +20,7 @@ xcuserdata/
 ## Other
 *.moved-aside
 *.xcuserstate
-/APIClient/TestKeyConstants.swift
+GoogleKeyConstants.swift
 
 ## Obj-C/Swift specific
 *.hmap
