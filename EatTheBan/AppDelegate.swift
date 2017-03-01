@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     FIRApp.configure()
-
+    GMSServices.provideAPIKey(GoogleKeyConstants.mapsKey)
+    GMSPlacesClient.provideAPIKey(GoogleKeyConstants.mapsKey)
     setUpTabBar()
     return true
   }
@@ -34,11 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let restaurantsStoryboard = UIStoryboard(name: StoryboardConstants.restaurantsVC, bundle: nil)
     let restaurantsVC = restaurantsStoryboard.instantiateViewController(withIdentifier: VCConstants.restaurantsVC) as! RestaurantsViewController
-    restaurantsVC.tabBarItem = UITabBarItem(title: "Restaurants", image: nil, tag: 2)
+    restaurantsVC.tabBarItem = UITabBarItem(title: "Restaurants", image: nil, tag: 1)
     
     let aboutStoryboard = UIStoryboard(name: StoryboardConstants.aboutVC, bundle: nil)
     let aboutVC = aboutStoryboard.instantiateViewController(withIdentifier: VCConstants.aboutVC) as! AboutViewController
-    aboutVC.tabBarItem = UITabBarItem(title: "About", image: nil, tag: 3)
+    aboutVC.tabBarItem = UITabBarItem(title: "About", image: nil, tag: 2)
     
     let submitStoryboard = UIStoryboard(name: StoryboardConstants.submitVC, bundle: nil)
     let submitVC = submitStoryboard.instantiateViewController(withIdentifier: VCConstants.submitVC) as! SubmitViewController
