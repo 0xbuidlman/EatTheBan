@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -27,7 +26,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rMe-rt-il7" userLabel="BannerImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="187.5"/>
-                                <color key="backgroundColor" red="0.5490196078431373" green="0.84705882352941175" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.5490196078431373" green="0.84705882352941175" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rMe-rt-il7" secondAttribute="height" multiplier="2:1" id="dXM-xF-ppp"/>
                                 </constraints>
@@ -35,15 +34,15 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IrP-NS-EZm" userLabel="TitleStackView">
                                 <rect key="frame" x="38" y="57" width="300" height="75"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eat The Ban NYC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SiC-vD-lxd">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eat The Ban NYC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SiC-vD-lxd">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="37.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the country, eat all the things" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXs-8q-gFh">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose the country, eat all the things" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KXs-8q-gFh">
                                         <rect key="frame" x="0.0" y="37.5" width="300" height="37.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -53,16 +52,16 @@
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z2s-7f-D5z" userLabel="CountriesTableView">
-                                <rect key="frame" x="0.0" y="206.5" width="375" height="460.5"/>
+                                <rect key="frame" x="0.0" y="209.5" width="375" height="457.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOt-v5-aA9" userLabel="FoodNearMeButton">
-                                <rect key="frame" x="93" y="168.5" width="188" height="38"/>
+                                <rect key="frame" x="74.5" y="164.5" width="225" height="45"/>
                                 <color key="backgroundColor" red="0.92941176470588238" green="0.23529411764705882" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kOt-v5-aA9" secondAttribute="height" multiplier="5:1" id="VWo-Dy-Mcm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="Food Near Me -&gt;">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -80,7 +79,7 @@
                             <constraint firstItem="rMe-rt-il7" firstAttribute="width" secondItem="U6O-TF-IN3" secondAttribute="width" id="4uo-7L-M4D"/>
                             <constraint firstItem="rMe-rt-il7" firstAttribute="centerX" secondItem="U6O-TF-IN3" secondAttribute="centerX" id="610-v8-n5D"/>
                             <constraint firstItem="Z2s-7f-D5z" firstAttribute="width" secondItem="U6O-TF-IN3" secondAttribute="width" id="AC1-Cu-kBI"/>
-                            <constraint firstItem="kOt-v5-aA9" firstAttribute="width" secondItem="U6O-TF-IN3" secondAttribute="width" multiplier="0.5" id="BD0-MF-3hp"/>
+                            <constraint firstItem="kOt-v5-aA9" firstAttribute="width" secondItem="U6O-TF-IN3" secondAttribute="width" multiplier="0.6" id="BD0-MF-3hp"/>
                             <constraint firstItem="Z2s-7f-D5z" firstAttribute="centerX" secondItem="U6O-TF-IN3" secondAttribute="centerX" id="RUe-R1-Mx8"/>
                             <constraint firstItem="rMe-rt-il7" firstAttribute="top" secondItem="U6O-TF-IN3" secondAttribute="topMargin" id="Soy-nM-VYY"/>
                             <constraint firstItem="IrP-NS-EZm" firstAttribute="centerY" secondItem="rMe-rt-il7" secondAttribute="centerY" id="aVM-TA-gfT"/>
@@ -89,6 +88,7 @@
                             <constraint firstItem="Z2s-7f-D5z" firstAttribute="top" secondItem="kOt-v5-aA9" secondAttribute="bottom" id="xTB-4Z-KNV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="yb6-Xp-EnM"/>
                     <connections>
                         <outlet property="bannerImageView" destination="rMe-rt-il7" id="Mkm-S9-6Kn"/>
                         <outlet property="countriesTableView" destination="Z2s-7f-D5z" id="zdu-QO-MVA"/>
@@ -97,7 +97,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHf-fi-5nq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="463" y="-265"/>
+            <point key="canvasLocation" x="1400.8" y="-265.81709145427288"/>
+        </scene>
+        <!--Home Navigation Controller-->
+        <scene sceneID="z7Q-yZ-6Ki">
+            <objects>
+                <navigationController storyboardIdentifier="HomePageNavigation" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="n8h-ge-LdE" customClass="HomeNavigationController" customModule="EatTheBan" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="izS-Ma-cV8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OYa-OC-K5m" kind="relationship" relationship="rootViewController" id="3bA-d7-iy6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MoF-GQ-rq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="461.60000000000002" y="-265.81709145427288"/>
         </scene>
     </scenes>
 </document>

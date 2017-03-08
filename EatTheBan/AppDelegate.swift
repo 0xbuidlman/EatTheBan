@@ -16,26 +16,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
     FIRApp.configure()
     GMSServices.provideAPIKey(GoogleKeyConstants.mapsKey)
     GMSPlacesClient.provideAPIKey(GoogleKeyConstants.mapsKey)
     setUpTabBar()
+    customizeNavigationViewSettings()
     return true
   }
   
-  func setUpTabBar() {
+  private func setUpTabBar() {
     let tabBarController = UITabBarController()
     
     let homeStoryBoard = UIStoryboard(name: StoryboardConstants.homeVC, bundle: nil)
-    let homeVC = homeStoryBoard.instantiateViewController(withIdentifier: VCConstants.homeVC) as! HomePageViewController
+    let homeVC = homeStoryBoard.instantiateViewController(withIdentifier: "HomePageNavigation") as! HomeNavigationController
     homeVC.tabBarItem = UITabBarItem(title: "Home", image: nil, tag: 0)
     
     let restaurantsStoryboard = UIStoryboard(name: StoryboardConstants.restaurantsVC, bundle: nil)
     let restaurantsVC = restaurantsStoryboard.instantiateViewController(withIdentifier: VCConstants.restaurantsVC) as! RestaurantsViewController
-    restaurantsVC.tabBarItem = UITabBarItem(title: "Restaurants", image: nil, tag: 1)
+    restaurantsVC.tabBarItem = UITabBarItem(title: "Map", image: nil, tag: 1)
     
     let aboutStoryboard = UIStoryboard(name: StoryboardConstants.aboutVC, bundle: nil)
     let aboutVC = aboutStoryboard.instantiateViewController(withIdentifier: VCConstants.aboutVC) as! AboutViewController
@@ -48,15 +47,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let controllers = [homeVC, restaurantsVC, aboutVC, submitVC]
     tabBarController.viewControllers = controllers
     tabBarController.selectedIndex = 0
+    tabBarController.tabBar.barTintColor = UIColor.white
+    customizeTabBarItems(tabBarController: tabBarController)
     
-    tabBarController.tabBar.barTintColor = UIColor.black
-    
-    if let mainVC = homeStoryBoard.instantiateInitialViewController(){
-      tabBarController.setViewControllers([mainVC], animated: false)
-    }
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.rootViewController = tabBarController
     window?.makeKeyAndVisible()
+  }
+  
+  private func customizeTabBarItems(tabBarController: UITabBarController) {
+    let tabImages = [#imageLiteral(resourceName: "nav_home"), #imageLiteral(resourceName: "nav_map"), #imageLiteral(resourceName: "nav_about"), #imageLiteral(resourceName: "nav_submit")]
+    let tabSelectedImages = [#imageLiteral(resourceName: "nav_home_selected"), #imageLiteral(resourceName: "nav_map_selected"), #imageLiteral(resourceName: "nav_about_selected"), #imageLiteral(resourceName: "nav_submit_selected")]
+    guard let items = tabBarController.tabBar.items else {
+      return
+    }
+    let tabFont = UIFont.systemFont(ofSize: 12, weight: UIFontWeightSemibold)
+    var i = 0
+    for tab in items {
+      tab.setTitleTextAttributes([NSFontAttributeName: tabFont, NSForegroundColorAttributeName: UIColor.gray], for: .normal)
+      tab.setTitleTextAttributes([NSFontAttributeName: tabFont, NSForegroundColorAttributeName: UIColor.black], for: .highlighted)
+      tab.image = tabImages[i].withRenderingMode(.alwaysOriginal)
+      tab.selectedImage = tabSelectedImages[i].withRenderingMode(.alwaysOriginal)
+      i += 1
+    }
+  }
+  
+  private func customizeNavigationViewSettings() {
+    UINavigationBar.appearance().tintColor = UIColor.white
+    let titleFont = UIFont.systemFont(ofSize: 16, weight: UIFontWeightHeavy)
+    UINavigationBar.appearance().titleTextAttributes = ([NSFontAttributeName: titleFont, NSForegroundColorAttributeName: UIColor.white])
+    UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -500, vertical: -500), for: .default)
   }
 
   func applicationWillResignActive(_ application: UIApplication) {

@@ -11,6 +11,8 @@ import UIKit
 
 class SubmitViewController: MainViewController {
   
-  
+  override func viewDidLoad() {
+    
+  }
   
 }

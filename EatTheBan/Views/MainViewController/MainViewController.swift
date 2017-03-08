@@ -9,10 +9,9 @@
 import Foundation
 import UIKit
 
+//The class that other viewcontrollers will inherit from
+
 class MainViewController: UIViewController {
-  
-  
-  
   
   
 }

@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+//Container view controller in Country Details VC
+//shows map of restaurants from specific country clicked on homepage
 class RestaurantsContainerViewController: MainViewController {
   
   override func viewDidLoad() {

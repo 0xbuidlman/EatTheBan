@@ -12,21 +12,31 @@ import GoogleMaps
 
 class MapViewController: MainViewController {
   
+  let viewModel = MapViewModel()
+  
   override func loadView() {
     let camera = GMSCameraPosition.camera(withLatitude: 40.730610, longitude: -73.935242, zoom: 11.0)
     let googleMapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
     view = googleMapView
-    
-
+    addMarkersToMap(googleMapView: googleMapView)
   }
   
-  private func createMarkers(googleMapView: GMSMapView) {
-    // Creates a marker in the center of the map.
+  private func addMarkersToMap(googleMapView: GMSMapView) {
+    guard viewModel.restaurants.count > 0 else {
+      return
+    }
+    for restaurant in viewModel.restaurants {
+      let marker = createMarker(restaurant: restaurant)
+      marker.map = googleMapView
+    }
+  }
+  
+  private func createMarker(restaurant: Restaurant) -> GMSMarker {
     let marker = GMSMarker()
-    marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-    marker.title = "Sydney"
-    marker.snippet = "Australia"
-    marker.map = googleMapView
+    marker.position = restaurant.location
+    marker.title = restaurant.name
+    marker.snippet = restaurant.country
+    return marker
   }
   
 }

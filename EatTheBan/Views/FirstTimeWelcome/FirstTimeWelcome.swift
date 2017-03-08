@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
+//This ViewController will show the first time user opens App
 class FirstTimeWelcome: MainViewController {
   
   @IBOutlet weak var eatButton: UIButton!
   @IBOutlet weak var logoImageView: UIImageView!
-  
   
   override func viewDidLoad() {
     makeLogoCircle()
@@ -41,7 +41,5 @@ class FirstTimeWelcome: MainViewController {
   @IBAction func eatButtonTapped(_ sender: Any) {
     
   }
-  
-  
   
 }

@@ -9,17 +9,26 @@
 import Foundation
 import UIKit
 
+//ViewController with map of restaurants from all countries
 class RestaurantsViewController: MainViewController {
   
   @IBOutlet weak var countryOptionView: UIView!
   @IBOutlet weak var openNowView: UIView!
   @IBOutlet weak var topBlueView: UIView!
   @IBOutlet weak var restaurantDetailView: UIView!
+  @IBOutlet weak var restaurantNameLabel: UILabel!
+  @IBOutlet weak var restaurantCountryLabel: UILabel!
+  @IBOutlet weak var restaurantStreetLabel: UILabel!
+  @IBOutlet weak var retaurantCityLabel: UILabel!
+  @IBOutlet weak var numberView: UIView!
+  @IBOutlet weak var numberLabel: UILabel!
+  
   
   
   override func viewDidLoad() {
     roundTopViewEdges()
     addShadows()
+    setUpInfoView()
   }
   
   private func addShadows() {
@@ -37,22 +46,24 @@ class RestaurantsViewController: MainViewController {
   
   private func roundTopViewEdges() {
     countryOptionView.layer.cornerRadius = countryOptionView.frame.height * 0.2
-    countryOptionView.layer.borderColor = UIColor.white.cgColor
-    countryOptionView.layer.borderWidth = 0.7
     countryOptionView.layer.masksToBounds = true
     openNowView.layer.cornerRadius = openNowView.frame.height * 0.2
-    openNowView.layer.borderWidth = 0.7
-    openNowView.layer.borderColor = UIColor.white.cgColor
     openNowView.layer.masksToBounds = true
   }
   
+  private func setUpInfoView() {
+    numberView.layer.cornerRadius = numberView.frame.height * 0.5
+    numberView.clipsToBounds = true
+    numberView.layoutIfNeeded()
+  }
+  
   @IBAction func leftToggleButtonTapped(_ sender: Any) {
+    
   }
   
   @IBAction func rightToggleButtonTapped(_ sender: Any) {
+    
   }
   
-  
- 
 }
 

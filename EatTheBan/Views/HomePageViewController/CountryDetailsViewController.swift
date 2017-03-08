@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+//ViewController presented when you click Home Page tableviewcell
+//Shows details on country, gives you the option to look at restaurants map
 class CountryDetailsViewController: MainViewController {
   
   @IBOutlet weak var leftUnderline: UIView!
@@ -16,22 +18,18 @@ class CountryDetailsViewController: MainViewController {
   @IBOutlet weak var overviewLabel: UILabel!
   @IBOutlet weak var restaurantsLabel: UILabel!
   
-  
   override func viewDidLoad() {
-    title = "Iran"
+    title = "IRAN"
   }
   
   override func viewWillAppear(_ animated: Bool) {
-    
+    navigationController?.setNavigationBarHidden(false, animated: false)
   }
-  
-  
   
   static func storyboardInstance() -> CountryDetailsViewController? {
     let storyboard = UIStoryboard(name:
       StoryboardConstants.countryDetailsVC, bundle: nil)
     return storyboard.instantiateViewController(withIdentifier: VCConstants.countryDetailsVC) as? CountryDetailsViewController
   }
-  
   
 }

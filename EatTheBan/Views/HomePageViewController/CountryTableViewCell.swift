@@ -9,11 +9,10 @@
 import Foundation
 import UIKit
 
+//Custom tableview cell on homepage tableview
 class CountryTableViewCell: UITableViewCell {
   
   @IBOutlet weak var flagImageView: UIImageView!
   @IBOutlet weak var countryNameLabel: UILabel!
-  
-  
   
 }

@@ -11,7 +11,8 @@ import UIKit
 
 class AboutViewController: MainViewController {
   
-  
-  
+  override func viewDidLoad() {
+    
+  }
   
 }

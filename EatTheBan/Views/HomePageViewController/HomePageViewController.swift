@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
+//Home page ViewController
+//Shows tableview of country restaurant options
 class HomePageViewController: MainViewController, UITableViewDelegate, UITableViewDataSource {
   
   @IBOutlet weak var countriesTableView: UITableView!
   @IBOutlet weak var bannerImageView: UIImageView!
-  
   @IBOutlet weak var foodNearMeButton: UIButton!
-  
   
   let homeVM = HomePageViewModel()
   
@@ -24,10 +24,28 @@ class HomePageViewController: MainViewController, UITableViewDelegate, UITableVi
     customizeFoodNearMeButton()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    navigationController?.setNavigationBarHidden(true, animated: false)
+    customizeNavigationBar()
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    if let indexPath = countriesTableView.indexPathForSelectedRow {
+      countriesTableView.deselectRow(at: indexPath, animated: animated)
+    }
+  }
+  
   static func storyboardInstance() -> HomePageViewController? {
     let storyboard = UIStoryboard(name:
       StoryboardConstants.homeVC, bundle: nil)
     return storyboard.instantiateViewController(withIdentifier: VCConstants.homeVC) as? HomePageViewController
+  }
+  
+  private func customizeNavigationBar() {
+    let navBar = navigationController?.navigationBar
+    navBar?.backgroundColor = UIColor.clear
+    navBar?.setBackgroundImage(UIImage(), for: .default)
+    navBar?.shadowImage = UIImage()
   }
   
   private func setUpCustomTableViewCells() {
@@ -40,13 +58,10 @@ class HomePageViewController: MainViewController, UITableViewDelegate, UITableVi
   private func customizeFoodNearMeButton() {
     foodNearMeButton.layoutIfNeeded()
     foodNearMeButton.layer.cornerRadius = foodNearMeButton.frame.height * 0.2
-    
     foodNearMeButton.layer.shadowOffset = CGSize.zero
-    //CGSize(width: 0.0, height: 1.0)
     foodNearMeButton.layer.shadowColor = UIColor.black.cgColor
-    foodNearMeButton.layer.shadowRadius = 5.0 //default is 3.0
-    foodNearMeButton.layer.shadowOpacity = 0.4 //default is 0.0
-//    foodNearMeButton.layer.masksToBounds = true
+    foodNearMeButton.layer.shadowRadius = 5.0
+    foodNearMeButton.layer.shadowOpacity = 0.4
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -65,18 +80,16 @@ class HomePageViewController: MainViewController, UITableViewDelegate, UITableVi
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-      return (countriesTableView.frame.height - countriesTableView.sectionHeaderHeight) / 7
+    return countriesTableView.frame.height / 7
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //addNavigationController()
     let detailsStoryboard = UIStoryboard.init(name: StoryboardConstants.countryDetailsVC, bundle: nil)
     let detailsVC = detailsStoryboard.instantiateViewController(withIdentifier: VCConstants.countryDetailsVC) as! CountryDetailsViewController
-    present(detailsVC, animated: true, completion: nil)
+    navigationController?.pushViewController(detailsVC, animated: true)
   }
   
   @IBAction func foodNearMeButtonTapped(_ sender: Any) {
-    
     
   }
   

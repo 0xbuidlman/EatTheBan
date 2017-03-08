@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-
+//Container view controller in Country Details VC
+//Shows details about country, popular plates 
 class OverviewContainerViewController: MainViewController {
   
   @IBOutlet weak var bannerImageView: UIImageView!

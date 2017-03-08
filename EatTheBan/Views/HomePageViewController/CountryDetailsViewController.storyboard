@@ -4,8 +4,8 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -24,72 +24,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXy-7Q-npT" userLabel="OptionsView">
-                                <rect key="frame" x="-1" y="20" width="376" height="47"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cN-fN-aPx" userLabel="LeftUnderline">
-                                        <rect key="frame" x="0.0" y="46" width="188" height="1"/>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="Yfw-KP-f96"/>
-                                        </constraints>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqD-Xc-S3y">
-                                        <rect key="frame" x="58" y="13" width="72" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Plj-iN-sCt" userLabel="RightUnderline">
-                                        <rect key="frame" x="188" y="46" width="188" height="1"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="mWd-ed-bge"/>
-                                        </constraints>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NYC Restaurants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaD-BE-B86">
-                                        <rect key="frame" x="217" y="13" width="130" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="KaD-BE-B86" firstAttribute="centerX" secondItem="Plj-iN-sCt" secondAttribute="centerX" id="91z-Tz-aiR"/>
-                                    <constraint firstAttribute="width" secondItem="uXy-7Q-npT" secondAttribute="height" multiplier="8:1" id="9jB-oN-Inb"/>
-                                    <constraint firstItem="3cN-fN-aPx" firstAttribute="leading" secondItem="uXy-7Q-npT" secondAttribute="leading" id="Nnp-8y-TsQ"/>
-                                    <constraint firstItem="3cN-fN-aPx" firstAttribute="bottom" secondItem="uXy-7Q-npT" secondAttribute="bottom" id="Ruc-hr-UEG"/>
-                                    <constraint firstItem="hqD-Xc-S3y" firstAttribute="centerX" secondItem="3cN-fN-aPx" secondAttribute="centerX" id="UF0-V3-xiN"/>
-                                    <constraint firstItem="Plj-iN-sCt" firstAttribute="width" secondItem="uXy-7Q-npT" secondAttribute="width" multiplier="0.5" id="YPK-FI-RXh"/>
-                                    <constraint firstItem="Plj-iN-sCt" firstAttribute="trailing" secondItem="uXy-7Q-npT" secondAttribute="trailing" id="bPf-dj-DNA"/>
-                                    <constraint firstItem="Plj-iN-sCt" firstAttribute="bottom" secondItem="uXy-7Q-npT" secondAttribute="bottom" id="eMh-Ar-VNW"/>
-                                    <constraint firstItem="3cN-fN-aPx" firstAttribute="width" secondItem="uXy-7Q-npT" secondAttribute="width" multiplier="0.5" id="hZl-nA-tb2"/>
-                                    <constraint firstItem="hqD-Xc-S3y" firstAttribute="centerY" secondItem="uXy-7Q-npT" secondAttribute="centerY" id="hjc-Kr-9yR"/>
-                                    <constraint firstItem="KaD-BE-B86" firstAttribute="centerY" secondItem="uXy-7Q-npT" secondAttribute="centerY" id="whU-Bj-w19"/>
-                                </constraints>
-                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTm-Vd-ZRt">
-                                <rect key="frame" x="-1" y="67" width="376" height="600"/>
+                                <rect key="frame" x="-0.5" y="51.5" width="375" height="615.5"/>
                                 <connections>
                                     <segue destination="ZCp-i3-7ij" kind="embed" id="ofi-Zn-O3S"/>
                                 </connections>
                             </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXy-7Q-npT" userLabel="OptionsView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="31.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boJ-oz-xcz">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="28.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="13"/>
+                                        <state key="normal" title="Overview">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMr-kp-JTR">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="28.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="13"/>
+                                        <state key="normal" title="NYC Restaurants">
+                                            <color key="titleColor" red="0.1843137255" green="0.72941176470000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3cN-fN-aPx" userLabel="LeftUnderline">
+                                        <rect key="frame" x="0.0" y="28.5" width="187.5" height="3"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="3" id="Yfw-KP-f96"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Plj-iN-sCt" userLabel="RightUnderline">
+                                        <rect key="frame" x="187.5" y="28.5" width="187.5" height="3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="3" id="mWd-ed-bge"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.5490196078431373" green="0.84705882352941175" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uXy-7Q-npT" secondAttribute="height" multiplier="12:1" id="9jB-oN-Inb"/>
+                                    <constraint firstItem="uMr-kp-JTR" firstAttribute="trailing" secondItem="uXy-7Q-npT" secondAttribute="trailing" id="Aqt-et-FlT"/>
+                                    <constraint firstItem="3cN-fN-aPx" firstAttribute="leading" secondItem="uXy-7Q-npT" secondAttribute="leading" id="Nnp-8y-TsQ"/>
+                                    <constraint firstItem="3cN-fN-aPx" firstAttribute="bottom" secondItem="uXy-7Q-npT" secondAttribute="bottom" id="Ruc-hr-UEG"/>
+                                    <constraint firstItem="boJ-oz-xcz" firstAttribute="top" secondItem="uXy-7Q-npT" secondAttribute="top" id="TLh-Ph-1pX"/>
+                                    <constraint firstItem="boJ-oz-xcz" firstAttribute="leading" secondItem="uXy-7Q-npT" secondAttribute="leading" id="Vej-PA-Qy7"/>
+                                    <constraint firstItem="uMr-kp-JTR" firstAttribute="bottom" secondItem="Plj-iN-sCt" secondAttribute="top" id="XMf-a6-F6o"/>
+                                    <constraint firstItem="Plj-iN-sCt" firstAttribute="width" secondItem="uXy-7Q-npT" secondAttribute="width" multiplier="0.5" id="YPK-FI-RXh"/>
+                                    <constraint firstItem="boJ-oz-xcz" firstAttribute="bottom" secondItem="3cN-fN-aPx" secondAttribute="top" id="ayc-1e-vep"/>
+                                    <constraint firstItem="Plj-iN-sCt" firstAttribute="trailing" secondItem="uXy-7Q-npT" secondAttribute="trailing" id="bPf-dj-DNA"/>
+                                    <constraint firstItem="Plj-iN-sCt" firstAttribute="bottom" secondItem="uXy-7Q-npT" secondAttribute="bottom" id="eMh-Ar-VNW"/>
+                                    <constraint firstItem="3cN-fN-aPx" firstAttribute="width" secondItem="uXy-7Q-npT" secondAttribute="width" multiplier="0.5" id="hZl-nA-tb2"/>
+                                    <constraint firstItem="uMr-kp-JTR" firstAttribute="leading" secondItem="uXy-7Q-npT" secondAttribute="centerX" id="pJK-Qd-XwN"/>
+                                    <constraint firstItem="uMr-kp-JTR" firstAttribute="top" secondItem="uXy-7Q-npT" secondAttribute="top" id="q9d-nV-EhA"/>
+                                    <constraint firstItem="boJ-oz-xcz" firstAttribute="trailing" secondItem="uXy-7Q-npT" secondAttribute="centerX" id="qRD-Ct-gHK"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.54901960780000003" green="0.84705882349999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cTm-Vd-ZRt" firstAttribute="centerX" secondItem="76G-HF-62c" secondAttribute="centerX" id="0dI-wu-9lw"/>
                             <constraint firstItem="cTm-Vd-ZRt" firstAttribute="bottom" secondItem="Z23-Fv-uGt" secondAttribute="top" id="78M-Na-8Jj"/>
                             <constraint firstItem="uXy-7Q-npT" firstAttribute="width" secondItem="76G-HF-62c" secondAttribute="width" id="Aj2-EQ-HUc"/>
-                            <constraint firstItem="uXy-7Q-npT" firstAttribute="top" secondItem="MVR-Eb-rSA" secondAttribute="bottom" id="CMN-zK-BMj"/>
                             <constraint firstItem="cTm-Vd-ZRt" firstAttribute="width" secondItem="76G-HF-62c" secondAttribute="width" id="Tch-52-AKN"/>
                             <constraint firstItem="uXy-7Q-npT" firstAttribute="centerX" secondItem="76G-HF-62c" secondAttribute="centerX" id="eoF-Z3-COe"/>
                             <constraint firstItem="cTm-Vd-ZRt" firstAttribute="top" secondItem="uXy-7Q-npT" secondAttribute="bottom" id="sbd-TI-aQy"/>
+                            <constraint firstItem="uXy-7Q-npT" firstAttribute="top" secondItem="MVR-Eb-rSA" secondAttribute="bottom" id="v2d-UU-fqI"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="leftUnderline" destination="3cN-fN-aPx" id="RDJ-p0-phx"/>
-                        <outlet property="overviewLabel" destination="hqD-Xc-S3y" id="Pcq-DO-XfH"/>
-                        <outlet property="restaurantsLabel" destination="KaD-BE-B86" id="VJE-XQ-v2s"/>
                         <outlet property="rightUnderline" destination="Plj-iN-sCt" id="Vg8-N1-8Pw"/>
                     </connections>
                 </viewController>
@@ -119,58 +123,61 @@
         <scene sceneID="e1O-Gh-YMR">
             <objects>
                 <viewController id="ZCp-i3-7ij" customClass="OverviewContainerViewController" customModule="EatTheBan" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X9Q-G4-mBo"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jog-AH-bkv"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uk8-ps-jf0">
-                        <rect key="frame" x="0.0" y="0.0" width="376" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="615.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e7e-1M-bpb" userLabel="BannerImageView">
-                                <rect key="frame" x="0.0" y="0.0" width="376" height="150.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BannerCountryDetails" translatesAutoresizingMaskIntoConstraints="NO" id="e7e-1M-bpb" userLabel="BannerImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="174.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="e7e-1M-bpb" secondAttribute="height" multiplier="2.5:1" id="DTY-x1-GW2"/>
+                                    <constraint firstAttribute="width" secondItem="e7e-1M-bpb" secondAttribute="height" multiplier="2.15:1" id="DTY-x1-GW2"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uef-Dz-82d" userLabel="InformationView">
-                                <rect key="frame" x="0.0" y="150.5" width="376" height="449.5"/>
+                                <rect key="frame" x="0.0" y="174.5" width="375" height="441"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qps-r5-Vrh">
-                                        <rect key="frame" x="0.0" y="0.0" width="376" height="449.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="441"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FSc-5V-hdM" userLabel="ContentView">
-                                                <rect key="frame" x="0.0" y="0.0" width="376" height="449.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="441"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuisine of Iran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7QK-Ik-LlH">
-                                                        <rect key="frame" x="37.5" y="20" width="127.5" height="23"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="37" y="20" width="184.5" height="31.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                                        <color key="textColor" red="0.92941176469999998" green="0.23529411759999999" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-fd-U84">
-                                                        <rect key="frame" x="37.5" y="51" width="301" height="113"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="This is some sample text about Iran. Iran has very nice food and all of that stuff blah blah blah blah blah. " selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-fd-U84" userLabel="DetailsTextView">
+                                                        <rect key="frame" x="37" y="51.5" width="300" height="75"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="Cde-fd-U84" secondAttribute="height" multiplier="4:1.5" id="FQM-97-AeF"/>
+                                                            <constraint firstAttribute="width" secondItem="Cde-fd-U84" secondAttribute="height" multiplier="4:1" id="FQM-97-AeF"/>
                                                         </constraints>
-                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular Dishes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSA-HD-nrf" userLabel="DishesLabel">
-                                                        <rect key="frame" x="37.5" y="169" width="120" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="37" y="136.5" width="107.5" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
+                                                        <color key="textColor" red="0.92941176469999998" green="0.23529411759999999" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nNg-Iw-goy" userLabel="ImagesStackView">
-                                                        <rect key="frame" x="37.5" y="199.5" width="301" height="75.5"/>
+                                                        <rect key="frame" x="37" y="173.5" width="300" height="75"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iV5-f8-Ot0" userLabel="LeftImageView">
-                                                                <rect key="frame" x="0.0" y="0.0" width="92.5" height="75.5"/>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IranFood1" translatesAutoresizingMaskIntoConstraints="NO" id="iV5-f8-Ot0" userLabel="LeftImageView">
+                                                                <rect key="frame" x="0.0" y="0.0" width="92" height="75"/>
                                                             </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bKP-AC-xg1" userLabel="MiddleImageView">
-                                                                <rect key="frame" x="104.5" y="0.0" width="92" height="75.5"/>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IranFood4" translatesAutoresizingMaskIntoConstraints="NO" id="bKP-AC-xg1" userLabel="MiddleImageView">
+                                                                <rect key="frame" x="104" y="0.0" width="92" height="75"/>
                                                             </imageView>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VQ1-gq-kCb" userLabel="RightImageView">
-                                                                <rect key="frame" x="208.5" y="0.0" width="92.5" height="75.5"/>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IranFood2" translatesAutoresizingMaskIntoConstraints="NO" id="VQ1-gq-kCb" userLabel="RightImageView">
+                                                                <rect key="frame" x="208" y="0.0" width="92" height="75"/>
                                                             </imageView>
                                                         </subviews>
                                                         <constraints>
@@ -180,11 +187,11 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="oSA-HD-nrf" firstAttribute="top" secondItem="Cde-fd-U84" secondAttribute="bottom" constant="5" id="4Bb-Qq-P5I"/>
-                                                    <constraint firstItem="nNg-Iw-goy" firstAttribute="top" secondItem="oSA-HD-nrf" secondAttribute="bottom" constant="10" id="6hx-dc-mof"/>
+                                                    <constraint firstItem="oSA-HD-nrf" firstAttribute="top" secondItem="Cde-fd-U84" secondAttribute="bottom" constant="10" id="4Bb-Qq-P5I"/>
+                                                    <constraint firstItem="nNg-Iw-goy" firstAttribute="top" secondItem="oSA-HD-nrf" secondAttribute="bottom" constant="20" id="6hx-dc-mof"/>
                                                     <constraint firstItem="nNg-Iw-goy" firstAttribute="width" secondItem="Cde-fd-U84" secondAttribute="width" id="GJc-kU-UcC"/>
                                                     <constraint firstItem="7QK-Ik-LlH" firstAttribute="leading" secondItem="Cde-fd-U84" secondAttribute="leading" id="Ox4-cX-jbC"/>
-                                                    <constraint firstItem="Cde-fd-U84" firstAttribute="top" secondItem="7QK-Ik-LlH" secondAttribute="bottom" constant="8" id="RhU-dC-ZKG"/>
+                                                    <constraint firstItem="Cde-fd-U84" firstAttribute="top" secondItem="7QK-Ik-LlH" secondAttribute="bottom" id="RhU-dC-ZKG"/>
                                                     <constraint firstItem="Cde-fd-U84" firstAttribute="centerX" secondItem="FSc-5V-hdM" secondAttribute="centerX" id="WHF-0t-0Wx"/>
                                                     <constraint firstItem="7QK-Ik-LlH" firstAttribute="top" secondItem="FSc-5V-hdM" secondAttribute="top" constant="20" id="XQZ-i4-w0s"/>
                                                     <constraint firstItem="Cde-fd-U84" firstAttribute="width" secondItem="FSc-5V-hdM" secondAttribute="width" multiplier="0.8" id="aYo-pG-Rhg"/>
@@ -232,4 +239,10 @@
             <point key="canvasLocation" x="1143" y="-224"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BannerCountryDetails" width="898" height="418"/>
+        <image name="IranFood1" width="3264" height="2448"/>
+        <image name="IranFood2" width="1190" height="1186"/>
+        <image name="IranFood4" width="816" height="544"/>
+    </resources>
 </document>
